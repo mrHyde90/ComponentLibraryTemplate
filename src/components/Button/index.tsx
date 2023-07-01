@@ -10,7 +10,7 @@ export const Button: React.FC<ButtonProps> = ({
   ...props
 }) => {
   return (
-    <button onClick={onClick}>
+    <button onClick={onClick} disabled={disabled}>
       {
         text
       }
