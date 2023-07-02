@@ -11,9 +11,9 @@ export default meta;
 
 type Story = StoryObj<typeof Label>;
 
-export const Secondary: Story = (args) => (
-  <Label data-testId="InputField-id" {...args} />
-);
-Secondary.args = {
-  text: "Secondary",
+export const PrimaryWoba: Story = {
+  args: {
+    text: 'Button',
+  },
 };
+
