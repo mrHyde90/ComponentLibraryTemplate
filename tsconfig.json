@@ -10,6 +10,7 @@
     "sourceMap": true,
     "outDir": "dist",
     "moduleResolution": "node",
+    "noEmit": false,
     "emitDeclarationOnly": true,
     "allowSyntheticDefaultImports": true,
     "forceConsistentCasingInFileNames": true
@@ -19,5 +20,8 @@
     "node_modules",
     "src/**/*.test.tsx",
     "src/**/*.stories.tsx"
+  ],
+  "include": [
+    "src"
   ]
 }
