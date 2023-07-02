@@ -26,7 +26,7 @@ jobs:
         with:
           node-version: 18.16.1
 
-      - name: Install Dependencies
+      - name: Install Dependenciess
         run: npm ci
 
       - name: Build App
