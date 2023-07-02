@@ -1,5 +1,6 @@
-import React from 'react'
-import { ButtonProps } from './Button.types';
+/* eslint-disable @typescript-eslint/no-unused-vars */
+import React from 'react';
+import { type ButtonProps } from './Button.types';
 
 export const Button: React.FC<ButtonProps> = ({
   size,
@@ -15,7 +16,7 @@ export const Button: React.FC<ButtonProps> = ({
         text
       }
     </button>
-  )
+  );
 };
 
 export default Button;

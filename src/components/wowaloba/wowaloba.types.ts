@@ -1,5 +1,3 @@
-import { MouseEventHandler } from "react";
-
-export interface wowalobaProps {
-  text?: string;
+export interface WowalobaProps {
+  text?: string
 }
