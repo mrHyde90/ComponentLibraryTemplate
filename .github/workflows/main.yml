@@ -26,7 +26,7 @@ jobs:
         with:
           node-version: 14.17
 
-      - name: Install Dependencies
+      - name: Install Dependencie
         run: npm install
 
       - name: Build App
