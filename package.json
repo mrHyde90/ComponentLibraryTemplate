@@ -30,7 +30,8 @@
   "module": "dist/esm/index.js",
   "types": "dist/index.d.ts",
   "dependencies": {
-    "prop-types": "^15.8.1"
+    "prop-types": "^15.8.1",
+    "semantic-release": "^18.0.0"
   },
   "peerDependencies": {
     "react": "^18.2.0",
@@ -63,7 +64,6 @@
     "rollup-plugin-dts": "^5.3.0",
     "rollup-plugin-minification": "^0.2.0",
     "rollup-plugin-peer-deps-external": "^2.2.4",
-    "semantic-release": "^21.0.6",
     "storybook": "^7.0.24",
     "tslib": "^2.6.0",
     "typescript": "^5.1.6"
@@ -75,5 +75,5 @@
     "@semantic-release/github",
     "@semantic-release/npm",
     "@semantic-release/git"
-]
+  ]
 }
