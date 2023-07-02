@@ -11,10 +11,10 @@ export default meta;
 
 type Story = StoryObj<typeof Label>;
 
-export const Primary: Story = (args) => (
+export const PrimaryLabel: Story = (args) => (
   <Label data-testId="InputField-id" {...args} />
 );
-Primary.args = {
+PrimaryLabel.args = {
   text: "Primary",
 };
 

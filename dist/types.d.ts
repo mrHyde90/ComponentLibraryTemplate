@@ -10,4 +10,10 @@ interface ButtonProps {
 
 declare const Button: React.FC<ButtonProps>;
 
-export { Button };
+interface LabelProps {
+    text?: string;
+}
+
+declare const Label: React.FC<LabelProps>;
+
+export { Button, Label };

@@ -26,4 +26,4 @@ interface ButtonPProps {
  * Primary UI component for user interaction
  */
 export declare const Button: ({ primary, size, backgroundColor, label, ...props }: ButtonPProps) => React.JSX.Element;
-export {};
+export default Button;
