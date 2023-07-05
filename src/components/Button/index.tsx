@@ -1,6 +1,7 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import React from 'react';
 import { type ButtonProps } from './Button.types';
+import styles from './styles.module.css';
 
 export const Button: React.FC<ButtonProps> = ({
   size,
@@ -11,7 +12,7 @@ export const Button: React.FC<ButtonProps> = ({
   ...props
 }) => {
   return (
-    <button onClick={onClick} disabled={disabled}>
+    <button className={styles.container} onClick={onClick} disabled={disabled}>
       {
         text
       }
