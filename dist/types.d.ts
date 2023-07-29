@@ -10,4 +10,21 @@ interface ButtonProps {
 
 declare const Button: React.FC<ButtonProps>;
 
-export { Button };
+interface ICardData {
+    /**
+     * The name of the owner
+     */
+    holderName: string;
+    /**
+     * The number of the owner
+     */
+    holderNumber: string;
+    expirationDare: string;
+}
+interface FrontCardProps {
+    cardData: ICardData;
+}
+
+declare const FrontCard: React.FC<FrontCardProps>;
+
+export { Button, FrontCard };
