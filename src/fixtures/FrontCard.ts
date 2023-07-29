@@ -8,7 +8,7 @@ export const frontCardArgs: ICardData = {
 
 export const defaultValuesFormat: ICardData = {
   holderNumber: '0000 0000 0000 0000',
-  holderName: '',
+  holderName: 'felicia leire',
   expirationDare: '00/00',
 };
 
