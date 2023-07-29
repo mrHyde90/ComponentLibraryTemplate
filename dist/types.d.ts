@@ -4,16 +4,10 @@ interface ButtonProps {
     text?: string;
     primary?: boolean;
     disabled?: boolean;
-    size?: "small" | "medium" | "large";
+    size?: 'small' | 'medium' | 'large';
     onClick?: MouseEventHandler<HTMLButtonElement>;
 }
 
 declare const Button: React.FC<ButtonProps>;
 
-interface LabelProps {
-    text?: string;
-}
-
-declare const Label: React.FC<LabelProps>;
-
-export { Button, Label };
+export { Button };
