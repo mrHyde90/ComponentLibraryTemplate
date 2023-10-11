@@ -22,7 +22,7 @@ describe('FrontCard default or empty', () => {
 		cleanup();
 	});
 	test('Front Card need to exist', async () => { 
-		render(<FrontCard cardData={frontCardArgs} />);
+		render(<FrontCard {...frontCardArgs} />);
 
 		const image = screen.getByRole('img');
 
@@ -36,14 +36,14 @@ describe('FrontCard default or empty', () => {
 	});
 
 	test('Front card need to have 3 paragraphs', () => {
-		render(<FrontCard cardData={frontCardArgs} />);
+		render(<FrontCard {...frontCardArgs} />);
 
 		const paragraphs = screen.getAllByRole('paragraph');
 		expect(paragraphs).toHaveLength(3);
 	});
 
 	test('Front Card need to have default values', async () => { 
-		render(<FrontCard cardData={frontCardArgs} />);
+		render(<FrontCard {...frontCardArgs} />);
 		const holderName = await screen.findByTestId('holderName');
 		const holderNumber = screen.getByTestId('holderNumber');
 		const expirationDare = screen.getByTestId('expirationDare');
@@ -51,23 +51,23 @@ describe('FrontCard default or empty', () => {
 		console.log({ defaultValuesFormat, holderName });
 		expect(holderName).toHaveTextContent(defaultValuesFormat.holderName);
 		expect(holderNumber).toHaveTextContent(defaultValuesFormat.holderNumber);
-		expect(expirationDare).toHaveTextContent(defaultValuesFormat.expirationDare);
+		expect(expirationDare).toHaveTextContent(defaultValuesFormat.expirationDate);
 	});
 });
 
 describe('FrontCard with values', () => {
 	test('FrontCard need to have some values', async () => {
-		render(<FrontCard cardData={frontCardWithSomeValues} />);
+		render(<FrontCard {...frontCardWithSomeValues} />);
 		
 		const holderNumber = await screen.findByTestId('holderNumber');
 		const expirationDare = screen.getByTestId('expirationDare');
 
 		expect(holderNumber).toHaveTextContent(frontCardFormatSomeValues.holderNumber);
-		expect(expirationDare).toHaveTextContent(frontCardFormatSomeValues.expirationDare);
+		expect(expirationDare).toHaveTextContent(frontCardFormatSomeValues.expirationDate);
 	});
 
 	test('FrontCard need to have All values', async () => {
-		render(<FrontCard cardData={frontCardWithAllValues} />);
+		render(<FrontCard {...frontCardWithAllValues} />);
 	
 		const holderName = await screen.findByTestId('holderName');
 		const holderNumber = screen.getByTestId('holderNumber');
@@ -75,11 +75,11 @@ describe('FrontCard with values', () => {
 		
 		expect(holderName).toHaveTextContent(frontCardFormatAllValues.holderName);
 		expect(holderNumber).toHaveTextContent(frontCardFormatAllValues.holderNumber);
-		expect(expirationDare).toHaveTextContent(frontCardFormatAllValues.expirationDare);
+		expect(expirationDare).toHaveTextContent(frontCardFormatAllValues.expirationDate);
 	});
 
 	test('FrontCard need to have All values', async () => {
-		render(<FrontCard cardData={frontCardWithWrongValues} />);
+		render(<FrontCard {...frontCardWithWrongValues} />);
 	
 		const holderName = await screen.findByTestId('holderName');
 		const holderNumber = screen.getByTestId('holderNumber');
@@ -87,6 +87,6 @@ describe('FrontCard with values', () => {
 		
 		expect(holderName).toHaveTextContent(frontCardFormatWrongValues.holderName);
 		expect(holderNumber).toHaveTextContent(frontCardFormatWrongValues.holderNumber);
-		expect(expirationDare).toHaveTextContent(frontCardFormatWrongValues.expirationDare);
+		expect(expirationDare).toHaveTextContent(frontCardFormatWrongValues.expirationDate);
 	});
 });

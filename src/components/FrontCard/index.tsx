@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import React, { useMemo } from 'react';
-import { type FrontCardProps, type ICardData } from './FrontCard.types';
+import { type ICardData } from './FrontCard.types';
 import CardImage from '../../assets/images/bg-card-front.png';
 import styles from './FrontCard.module.css';
 import { getNumberFormatByFormat } from '../../utils';
@@ -9,20 +9,16 @@ import { HOLDER_NUMBER_FORMAT, HOLDER_EXPIRATION_FORMAT } from '../../constants'
 const INITIAL_PROPS: ICardData = {
   holderName: '',
   holderNumber: '',
-  expirationDare: '',
+  expirationDate: '',
 };
 
-export const FrontCard: React.FC<FrontCardProps> = ({
-  cardData = INITIAL_PROPS,
+export const FrontCard: React.FC<ICardData> = ({
+  holderName = INITIAL_PROPS.holderName,
+  holderNumber = INITIAL_PROPS.holderNumber,
+  expirationDate = INITIAL_PROPS.expirationDate,
 }) => {
-  const {
-    holderName,
-    holderNumber,
-    expirationDare,
-  } = cardData;
-
   const formattedHolderNumber = useMemo(() => getNumberFormatByFormat(holderNumber, HOLDER_NUMBER_FORMAT), [holderNumber, HOLDER_NUMBER_FORMAT]);
-  const formattedExpirationDate = useMemo(() => getNumberFormatByFormat(expirationDare, HOLDER_EXPIRATION_FORMAT), [expirationDare, HOLDER_EXPIRATION_FORMAT]);
+  const formattedExpirationDate = useMemo(() => getNumberFormatByFormat(expirationDate, HOLDER_EXPIRATION_FORMAT), [expirationDate, HOLDER_EXPIRATION_FORMAT]);
   return (
     <div className={styles.container}>
       <div className={styles.containerCircles}>

@@ -8,9 +8,8 @@ export interface ICardData {
    * The number of the owner
    */
   holderNumber: string
-  expirationDare: string
-}
-
-export interface FrontCardProps {
-  cardData: ICardData
+  /**
+   * The number of the owner
+   */
+  expirationDate: string
 }
