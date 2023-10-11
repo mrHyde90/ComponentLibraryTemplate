@@ -17,6 +17,7 @@ export const FrontCard: React.FC<ICardData> = ({
   holderNumber = INITIAL_PROPS.holderNumber,
   expirationDate = INITIAL_PROPS.expirationDate,
 }) => {
+  console.log('FrontCard');
   const formattedHolderNumber = useMemo(() => getNumberFormatByFormat(holderNumber, HOLDER_NUMBER_FORMAT), [holderNumber, HOLDER_NUMBER_FORMAT]);
   const formattedExpirationDate = useMemo(() => getNumberFormatByFormat(expirationDate, HOLDER_EXPIRATION_FORMAT), [expirationDate, HOLDER_EXPIRATION_FORMAT]);
   return (
